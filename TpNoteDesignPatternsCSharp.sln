@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TpNoteDesignPatternsCSharp.BLL", "TpNoteDesignPatternsCSharp.BLL\TpNoteDesignPatternsCSharp.BLL.csproj", "{9175BB13-84CB-416F-A212-E761E04078AA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TpNoteDesignPatternsCSharp.WEB", "TpNoteDesignPatternsCSharp.WEB\TpNoteDesignPatternsCSharp.WEB.csproj", "{27BE1E01-2F0A-4C4B-8743-F79BFD61B09A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TpNoteDesignPatternsCSharp.DAL", "TpNoteDesignPatternsCSharp.DAL\TpNoteDesignPatternsCSharp.DAL.csproj", "{A91E7001-EE77-45AF-81E2-69D54C80DDB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9175BB13-84CB-416F-A212-E761E04078AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9175BB13-84CB-416F-A212-E761E04078AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9175BB13-84CB-416F-A212-E761E04078AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9175BB13-84CB-416F-A212-E761E04078AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27BE1E01-2F0A-4C4B-8743-F79BFD61B09A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27BE1E01-2F0A-4C4B-8743-F79BFD61B09A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27BE1E01-2F0A-4C4B-8743-F79BFD61B09A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27BE1E01-2F0A-4C4B-8743-F79BFD61B09A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A91E7001-EE77-45AF-81E2-69D54C80DDB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A91E7001-EE77-45AF-81E2-69D54C80DDB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A91E7001-EE77-45AF-81E2-69D54C80DDB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A91E7001-EE77-45AF-81E2-69D54C80DDB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E5BDD49-1366-4FA7-934E-364FAC7A2EFF}
+	EndGlobalSection
+EndGlobal

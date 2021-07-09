@@ -1,0 +1,18 @@
+﻿@model TpNoteDesignPatternsCSharp.WEB.Models.PersonnagesViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+
+    <div class="px-4 py-3 bg-gray-50 sm:px-6">
+        <a asp-area="" asp-controller="Create" asp-action="Index" class="inline-flex justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Crée
+        </a>
+    </div>
+
+    <div id="grid">
+        @await Html.PartialAsync("_PersonnageGrid", Model.Personnages)
+    </div>
+
+</div>

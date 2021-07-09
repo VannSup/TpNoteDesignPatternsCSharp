@@ -1,0 +1,43 @@
+﻿@model TpNoteDesignPatternsCSharp.WEB.Models.AddEquipementViewModel
+
+@{
+    ViewData["Title"] = "Creation de personnage";
+}
+
+
+<form asp-controller="Personnage" asp-action="AddEquipement">
+    <div class="shadow overflow-hidden sm:rounded-md">
+        <div class="px-4 py-5 bg-white sm:p-6">
+            <div class="grid grid-cols-6 gap-6">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="col-span-6 sm:col-span-3">
+                    <label asp-for="Type" class=" control-label block text-sm font-medium text-gray-700">Sexe</label>
+                    <select asp-for="Type" class="form-control mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <option value="0">Arme</option>
+                        <option value="1">Armure</option>
+                        <option value="2">Autre</option>
+                    </select>
+                    <span asp-validation-for="Type" class="text-danger"></span>
+                </div>
+
+                <div class="col-span-6">
+                    <label asp-for="Name" class="control-label block text-sm font-medium text-gray-700">Nom</label>
+                    <input asp-for="Name" type="text" class="form-control mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="col-span-6" hidden>
+                    <label asp-for="PersonnageId" class="control-label block text-sm font-medium text-gray-700">Nom</label>
+                    <input asp-for="PersonnageId" type="number" class="form-control mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    <span asp-validation-for="PersonnageId" class="text-danger"></span>
+                </div>
+
+            </div>
+        </div>
+        <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+            <input type="submit" value="Valider" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" />
+        </div>
+    </div>
+</form>

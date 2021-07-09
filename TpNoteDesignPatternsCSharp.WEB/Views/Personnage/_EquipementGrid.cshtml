@@ -1,0 +1,54 @@
+﻿@model IEnumerable<TpNoteDesignPatternsCSharp.DAL.Model.Equipement>
+<table id="mainTable" class="table table-striped table-bordered">
+    <caption hidden>UserData</caption>
+    <thead>
+        <tr>
+            <th id="name">Nom</th>
+            <th id="type">Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td style="text-align: center; vertical-align: middle;">
+                <b>@Html.DisplayFor(modelItem => item.Name)</b>
+            </td>
+            <td>
+                @switch (item.TypeEquipement)
+                {
+                    case 0:
+                        <button type="button"
+                                class="btn btn-info toolkit"
+                                title="Arme"
+                                href="#"
+                                style="padding-left: 15px; padding-right: 15px;">
+                            <em class="fas fa-gavel fa-2x"></em>
+                        </button>
+                        break;
+                    case 1:
+                        <button type="button"
+                                class="btn btn-danger toolkit"
+                                title="Armure"
+                                href="#"
+                                style="padding-left: 15px; padding-right: 15px;">
+                            <em class="fas fa-shield-alt fa-2x"></em>
+                        </button>
+                        break;
+
+                    default:
+                        <button type="button"
+                                class="btn btn-dark toolkit"
+                                title="Autre"
+                                href="#"
+                                style="padding-left: 15px; padding-right: 15px;">
+                            <em class="fas fa-question fa-2x"></em>
+                        </button>
+                        break;
+                }
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+

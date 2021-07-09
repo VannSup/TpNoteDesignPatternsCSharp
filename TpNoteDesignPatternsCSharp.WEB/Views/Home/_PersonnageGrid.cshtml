@@ -1,0 +1,63 @@
+﻿@model IEnumerable<TpNoteDesignPatternsCSharp.WEB.Models.PersonnageViewModel>
+<table id="mainTable" class="table table-striped table-bordered">
+    <caption hidden>UserData</caption>
+    <thead>
+        <tr>
+            <th id="name">Nom</th>
+            <th id="sexe">Sexe</th>
+            <th id="race">Race</th>
+            <th id="action">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td style="text-align: center; vertical-align: middle;">
+                <b>@Html.DisplayFor(modelItem => item.Name)</b>
+            </td>
+            <td>
+                @switch (item.Sexe)
+                {
+                    case TpNoteDesignPatternsCSharp.BLL.Model.EnumSexe.Homme:
+                        <button type="button"
+                                class="btn btn-info toolkit"
+                                title="Homme"
+                                href="#"
+                                style="padding-left: 15px; padding-right: 15px;">
+                            <em class="fas fa-mars fa-2x"></em>
+                        </button>
+                        break;
+                    case TpNoteDesignPatternsCSharp.BLL.Model.EnumSexe.Femme:
+                        <button type="button"
+                                class="btn btn-danger toolkit"
+                                title="Femme"
+                                href="#"
+                                style="padding-left: 15px; padding-right: 15px;">
+                            <em class="fas fa-venus fa-2x"></em>
+                        </button>
+                        break;
+
+                    case TpNoteDesignPatternsCSharp.BLL.Model.EnumSexe.Autre:
+                        <button type="button"
+                                class="btn btn-dark toolkit"
+                                title="Femme"
+                                href="#"
+                                style="padding-left: 15px; padding-right: 15px;">
+                            <em class="fas fa-transgender fa-2x"></em>
+                        </button>
+                        break;
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Race)
+            </td>
+            <td>
+                <a href="/Personnage/Index/@item.Personnage.Id"><em class="fas fa-eye toolkit"></em></a>
+            </td>
+
+        </tr>
+        }
+    </tbody>
+</table>
+
